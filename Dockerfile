@@ -11,6 +11,6 @@ RUN chmod 700 /home/davislab/output/results
 RUN chown -R davislab:davislab /home/davislab/output/results/supplementary
 RUN chmod 700 /home/davislab/output/results/supplementary
 RUN (Rscript -e 'install.packages(c("dplyr","hexbin","colorRamps","survival","XML","ggplot2","matrixStats"), repos="http://cran.rstudio.com/")')
-RUN (Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite(c("limma","GSVA", "sva","org.Hs.eg.db"))')  
+RUN (Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite(c("limma","GSEABase","GSVA", "sva","org.Hs.eg.db"))')  
 WORKDIR /mforoutan_tgfb_2017_tumour
 RUN mv generate_all_experiments.R /home/davislab 
