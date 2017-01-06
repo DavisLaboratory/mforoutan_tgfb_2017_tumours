@@ -4,6 +4,8 @@ RUN git clone https://soroorh@bitbucket.org/soroorh/mforoutan_tgfb_2017_tumour.g
 RUN ln -s /mforoutan_tgfb_2017_tumour/output /home/davislab/output
 RUN ln -s /mforoutan_tgfb_2017_tumour/scripts /home/davislab/scripts
 RUN ln -s /mforoutan_tgfb_2017_tumour/data /home/davislab/data
+RUN chown -R davislab:davislab /home/davislab/data/TCGA/panCancer
+RUN chmod 700 /home/davislab/data/TCGA/panCancer
 RUN chown -R davislab:davislab /home/davislab/output/figures
 RUN chmod 700 /home/davislab/output/figures
 RUN chown -R davislab:davislab /home/davislab/output/results
